@@ -6,24 +6,30 @@ namespace App\Task1;
 
 class Track
 {
+    private float $lapLength;
+    private int $lapsNumber;
+
     public function __construct(float $lapLength, int $lapsNumber)
     {
-        //@todo
+        $this->lapLength = $lapLength;
+        $this->lapsNumber = $lapsNumber;
     }
 
     public function getLapLength(): float
     {
-        // @todo
+        return $this->lapLength;
     }
 
     public function getLapsNumber(): int
     {
-        // @todo
+        return $this->lapsNumber;
     }
 
     public function add(Car $car): void
     {
-        // @todo
+        //array, non return
+        $currentNumber = $this->getLapsNumber();
+        $this->lapsNumber = $currentNumber + 1;
     }
 
     public function all(): array
